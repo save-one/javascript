@@ -11,27 +11,27 @@ var judge = winLose(user_hand, js_hand);　//比べる関数を呼び出し、ju
 alert('あなたの選んだ手は' + user_hand + 'です。　\nJavaScriptの選んだ手は' + js_hand + 'です。 \n結果は' + judge + 'です。');
 
 }else if(user_hand == null){
-    alert('またチャレンジしてね');
+	alert('またチャレンジしてね');
 
 }else{
-    alert('グー・チョキ・パーのいずれかを入力してください');
+	alert('グー・チョキ・パーのいずれかを入力してください');
 }
 
 }while((user_hand != "グー") && (user_hand != "チョキ") && (user_hand != "パー") && (user_hand != null));
 
 function getJShand(){
-    var js_hand_num = Math.floor(Math.random() * 3);
-    var hand;
+	var js_hand_num = Math.floor(Math.random() * 3);
+	var hand;
 
-    if(js_hand_num == 0){
-        hand = "グー";
-    }else if(js_hand_num == 1){
-        hand = "チョキ";
-    }else if(js_hand_num == 2){
-        hand = "パー";
-    }
+	if(js_hand_num == 0){
+		hand = "グー";
+	}else if(js_hand_num == 1){
+		hand = "チョキ";
+	}else if(js_hand_num == 2){
+		hand = "パー";
+	}
 
-    return hand;
+	return hand;
 }
 
 function winLose(user, js){
